@@ -1,3 +1,6 @@
+/*
+ *Use this directive to convert drop downs into chose drop downs.
+ */
 (function (angular) {
     var AngularChosen = angular.module('AngularChosen', []);
 
@@ -7,9 +10,9 @@
             return {
                 name: 'chosen',
                 scope: {
-                    model: '=',
-                    enable: '=',
-                    change: '='
+                    model: '=', // the model to which this drop down is to be binded
+                    enable: '=', // attribute used to enable and disable the chosen
+                    change: '=' // trigger a change in the chosen drop down
                 },
                 restrict: 'A',
                 link: function ($scope, iElm) {
