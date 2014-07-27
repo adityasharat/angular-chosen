@@ -10,6 +10,7 @@
             return {
                 name: 'chosen',
                 scope: {
+                    list: '='
                     model: '=', // the model to which this drop down is to be binded
                     enable: '=', // attribute used to enable and disable the chosen
                     change: '=' // trigger a change in the chosen drop down
