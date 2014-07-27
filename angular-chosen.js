@@ -10,19 +10,19 @@
             return {
                 name: 'chosen',
                 scope: {
-                    list: '='
-                    model: '=', // the model to which this drop down is to be binded
-                    enable: '=', // attribute used to enable and disable the chosen
-                    change: '=' // trigger a change in the chosen drop down
+                    list: '=', // the options array
+                    enable: '=', // enable of disable the drop-down
+                    change: '=', // change will trigger the chosen:updated event
+                    model: '=' // the model to which the drop-down should bind
                 },
                 restrict: 'A',
-                link: function ($scope, iElm) {
+                link: function ($scope, iElm, iAttr) {
                     iElm.chosen({
                         width: '100%',
-                        placeholder_text_single: 'Select an option',
+                        placeholder_text_single: iAttr.placeholder || 'Select an option',
                         search_contains: true
                     });
-                    $scope.$watch('[model,enable,change]', function () {
+                    $scope.$watch('[list,enable,change,model]', function () {
                         iElm.trigger('chosen:updated');
                     }, true);
                 }
