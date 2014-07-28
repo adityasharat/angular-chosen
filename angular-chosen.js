@@ -30,11 +30,19 @@
                 model: '=' // the model to which the drop-down should bind
             };
 
+            /*
+             * initialize the list of items
+             * to watch to trigger the chosen:updated event
+             */
             watchCollection = [];
             Object.keys(scope).forEach(function (scopeName) {
                 watchCollection.push(scopeName);
             });
 
+            /*
+             * Add the list of event handler of the chosen
+             * in the scope.
+             */
             Object.keys(EVENTS).forEach(function (eventNameAlias) {
                 scope[eventNameAlias] = '=';
             });
@@ -49,13 +57,15 @@
                     iElm.trigger('chosen:updated');
                 }, true);
 
+                // assign event handlers
                 Object.keys(EVENTS).forEach(function (eventNameAlias) {
-                    if (typeof $scope[eventNameAlias] === 'function') {
-                        iElm.on(EVENTS[eventNameAlias], $scope[eventNameAlias]);
+                    if (typeof $scope[eventNameAlias] === 'function') { // check if the handler is a function
+                        iElm.on(EVENTS[eventNameAlias], $scope[eventNameAlias]); // listen to the event triggered by chosen
                     }
                 });
             };
 
+            // return the directive
             return {
                 name: 'chosen',
                 scope: scope,
