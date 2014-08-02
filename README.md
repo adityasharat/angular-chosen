@@ -5,7 +5,7 @@ Create Chosen dropdowns with ease in angular.
 
 How to use:
 
-* Include module in your angular app.
+* Include this module in your angular app.
 ```JavaScript
 	angular.module('myModule', ['angular.chosen']);
 ```
