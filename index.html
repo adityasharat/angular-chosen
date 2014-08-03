@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="angular.chosen.demo">
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -12,7 +12,7 @@
 
     <title>Chosen with AngularJS</title>
   </head>
-  <body ng-app="angular.chosen">
+  <body ng-controller="demoController">
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
       <header class="inner">
@@ -29,25 +29,24 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div class="row">
-          <p>Angular-Chosen is a angular directive that can be used to convert select boxes to a more user-friendly chosen drop downs.</p>
+          <p>Angular-Chosen is an angular directive that can be used to convert select boxes to a more user-friendly <a href="http://harvesthq.github.io/chosen/">chosen</a> drop downs.</p>
+        </div>
+        <div class="row">
+          <h2>Standard Select</h2>
         </div>
         <div class="row">
           <div class="col-md-6">
-            <select name="simple-select" id="simple-select-1">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+            <p>Turns this</p>
+            <select name="simple-select" id="simple-select-1" ng-model="data.country"
+              ng-options="country.code as country.name for country in countries">
             </select>
           </div>
           <div class="col-md-6">
-            <select chosen name="simple-select" id="simple-select-1">
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+            <p>Into this</p>
+            <select name="simple-select-chosen" id="simple-select-2"
+              chosen list="countries" model="data.country"
+              ng-model="data.country"
+              ng-options="country.code as country.name for country in countries">
             </select>
           </div>
         </div>
@@ -65,7 +64,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-resource.js"></script>
     <script src="javascripts/angular-chosen.js"></script>
+    <script src="javascripts/main.js"></script>
 
   </body>
 </html>
