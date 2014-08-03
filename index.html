@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Chosen with AmgularJS : Use Chosen drop down with Angular">
+    <meta name="description" content="Chosen with AngularJS : Use Chosen drop down with Angular">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css">
     <link rel="image_src" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen-sprite.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
@@ -47,7 +47,9 @@
 <pre><code class="language-markup">&lt;select ng-model=&quot;data.country&quot;
   ng-options=&quot;country.code as country.name
       for country in countries&quot;&gt;
-&lt;/select&gt;</code></pre>
+&lt;/select&gt;
+
+ </code></pre>
 
           </div>
           <div class="col-md-6">
@@ -59,6 +61,8 @@
 
             <h3>&nbsp;</h3>
 
+
+
 <pre><code class="language-markup">&lt;select chosen
     list=&quot;countries&quot;
   ng-model=&quot;data.country&quot;
@@ -66,15 +70,127 @@
       for country in countries&quot;&gt;
 &lt;/select&gt;</code></pre>
 
+
+
           </div>
         </div>
+
+        <div class="row">
+          <h2>Multiple Select</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Turns this</p>
+            <select ng-model="data.country"  multiple
+              ng-options="country.code as country.name for country in countries">
+            </select>
+
+            <h3>Code:</h3>
+
+<pre><code class="language-markup">&lt;select multiple ng-model=&quot;data.country&quot;
+  ng-options=&quot;country.code as country.name
+      for country in countries&quot;&gt;
+&lt;/select&gt;
+
+ </code></pre>
+
+          </div>
+          <div class="col-md-6">
+            <p>Into this</p>
+            <select id="simple-multiple" chosen list="countries"  multiple
+              ng-model="data.country"
+              ng-options="country.code as country.name for country in countries">
+            </select>
+
+            <h3>&nbsp;</h3>
+
+
+
+<pre><code class="language-markup">&lt;select chosen multiple
+    list=&quot;countries&quot;
+  ng-model=&quot;data.country&quot;
+  ng-options=&quot;country.code as country.name
+      for country in countries&quot;&gt;
+&lt;/select&gt;</code></pre>
+
+
+
+          </div>
+        </div>
+
+        <div class="row">
+          <h2>How to use:</h2>
+          <div class="row">
+            <div class="col-md-12">
+
+              <p>Include <a href="https://github.com/jquery/jquery">jQuery</a> in your html</p>
+
+
+
+<pre><code class="language-markup">&lt;!-- include the js --&gt;
+&lt;script src=&quot;path/to/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+
+
+              <p>Include <a href="http://harvesthq.github.io/chosen/">Chosen</a> in your html file</p>
+
+
+
+<pre><code class="language-markup">&lt;!-- include the js --&gt;
+&lt;script src=&quot;path/to/chosen-library/chosen.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- include the css and sprite --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/chosen-library/chosen.min.css&quot;&gt;
+&lt;link rel=&quot;image_src&quot; href=&quot;path/to/chosen-library/chosen-sprite.png&quot;&gt;
+
+&lt;!-- include angular-chosen --&gt;
+&lt;script src=&quot;path/to/angular-chosen.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+            <p>You can also use a CDN, for example</p>
+
+<pre><code class="language-markup">&lt;!-- include the js --&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- include the css and sprite --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css&quot;&gt;
+&lt;link rel=&quot;image_src&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen-sprite.png&quot;&gt;
+
+&lt;!-- include angular-chosen --&gt;
+&lt;script src=&quot;path/to/angular-chosen.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <p>Add angular.chosen as a dependency in your angular projects module</p>
+
+              <pre><code class="language-javascript">angular.module('yourModule', ['angular.chosen']);</code></pre>
+
+              <p>That's it you're good to go !!</p>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+
+          </div>
+        </div>
+
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Chosen with AmgularJS maintained by <a href="https://github.com/adityasharat">adityasharat</a></p>
+        <p class="copyright">Chosen with AngularJS maintained by <a href="https://github.com/adityasharat">adityasharat</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>

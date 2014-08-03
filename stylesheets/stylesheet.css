@@ -437,3 +437,16 @@ select {
 .chosen-container a.chosen-single div {
   padding-top: 5px;
 }
+
+.chosen-container.chosen-container-multi  ul li.search-field {
+  height: 27px;
+}
+
+.chosen-container.chosen-container-multi  ul.chosen-choices li.search-field input {
+  height: 16px;
+  margin-top: 5px;
+}
+
+#simple_multiple_chosen {
+  margin-bottom: 52px;
+}
