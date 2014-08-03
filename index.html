@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.min.css">
     <link rel="image_src" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen-sprite.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/prism.css">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -37,17 +38,34 @@
         <div class="row">
           <div class="col-md-6">
             <p>Turns this</p>
-            <select name="simple-select" id="simple-select-1" ng-model="data.country"
+            <select ng-model="data.country"
               ng-options="country.code as country.name for country in countries">
             </select>
+
+            <h3>Code:</h3>
+
+<pre><code class="language-markup">&lt;select ng-model=&quot;data.country&quot;
+  ng-options=&quot;country.code as country.name
+      for country in countries&quot;&gt;
+&lt;/select&gt;</code></pre>
+
           </div>
           <div class="col-md-6">
             <p>Into this</p>
-            <select name="simple-select-chosen" id="simple-select-2"
-              chosen list="countries" model="data.country"
+            <select chosen list="countries"
               ng-model="data.country"
               ng-options="country.code as country.name for country in countries">
             </select>
+
+            <h3>&nbsp;</h3>
+
+<pre><code class="language-markup">&lt;select chosen
+    list=&quot;countries&quot;
+  ng-model=&quot;data.country&quot;
+  ng-options=&quot;country.code as country.name
+      for country in countries&quot;&gt;
+&lt;/select&gt;</code></pre>
+
           </div>
         </div>
       </section>
@@ -67,6 +85,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-resource.js"></script>
     <script src="javascripts/angular-chosen.js"></script>
     <script src="javascripts/main.js"></script>
+    <script src="javascripts/prism.js"></script>
 
   </body>
 </html>
