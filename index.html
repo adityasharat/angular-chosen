@@ -246,7 +246,16 @@
               </li>
               <li>
                 <div class="row">
-                  <div class="col-md-12"></div>
+                  <h3>onShowDropdown: <small>on-show-dropdown</small></h3>
+                  <div class="col-md-12">
+                    <p>The <em>on-show-dropdown</em> attribute will execute the function assigned to it when the chosen fires the <em>'chosen:showing_dropdown'</em> event.</p>
+
+<pre><code class="language-markup">&lt;select chosen list=&quot;countries&quot; on-show-dropdown=&quot;doStuff&quot;
+    ng-model=&quot;data.country&quot;
+    ng-options=&quot;country.code as country.name for country in countries&quot;&gt;
+&lt;/select&gt;</code></pre>
+
+                  </div>
                 </div>
               </li>
               <li>
