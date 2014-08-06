@@ -450,3 +450,7 @@ select {
 #simple_multiple_chosen {
   margin-bottom: 52px;
 }
+
+ul.style-none {
+  list-style: none;
+}
