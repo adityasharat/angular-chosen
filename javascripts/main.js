@@ -10,6 +10,11 @@
 
     AngularChosenDemo.controller('demoController', ['$scope', 'Countries',
         function ($scope, Countries) {
+            var data = {
+                countries: [],
+                country: []
+            };
+
             $scope.countries = Countries.query();
             $scope.countriesMultiple = Countries.query();
         }

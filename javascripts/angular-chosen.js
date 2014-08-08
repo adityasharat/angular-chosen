@@ -27,7 +27,8 @@
                 list: '=', // the options array
                 enable: '=', // enable of disable the drop-down
                 change: '=', // change will trigger the chosen:updated event
-                model: '=' // the model to which the drop-down should bind
+                model: '=', // the model to which the drop-down should bind,
+                ngModel: '='
             };
 
             /*
@@ -53,6 +54,11 @@
                     placeholder_text_single: iAttr.placeholder || 'Select an option',
                     search_contains: true
                 });
+
+                iElm.on('change', function () {
+                    iElm.trigger('chosen:updated');
+                });
+
                 $scope.$watch('[' + watchCollection.join(',') + ']', function () {
                     iElm.trigger('chosen:updated');
                 }, true);
