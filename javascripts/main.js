@@ -11,6 +11,7 @@
     AngularChosenDemo.controller('demoController', ['$scope', 'Countries',
         function ($scope, Countries) {
             $scope.countries = Countries.query();
+            $scope.countriesMultiple = Countries.query();
         }
     ]);
 
