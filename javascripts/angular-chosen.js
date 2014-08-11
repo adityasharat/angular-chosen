@@ -49,7 +49,8 @@
             });
 
             linker = function ($scope, iElm, iAttr) {
-                var maxSelection = parseInt(iAttr.maxSelection, 10);
+                var maxSelection = parseInt(iAttr.maxSelection, 10),
+                    searchThreshold = parseInt(iAttr.searchThreshold, 10);
 
                 if (isNaN(maxSelection) || maxSelection === Infinity) {
                     maxSelection: undefined;
@@ -58,6 +59,7 @@
                 iElm.chosen({
                     width: '100%',
                     max_selected_options: maxSelection,
+                    disable_search_threshold: searchThreshold,
                     search_contains: true
                 });
 
