@@ -81,7 +81,7 @@
         <div class="row">
           <div class="col-md-6">
             <p>Turns this</p>
-            <select ng-model="data.countries"  multiple
+            <select ng-model="data.countries"
               ng-options="country.code as country.name for country in countriesMultiple">
             </select>
 
@@ -97,7 +97,7 @@
           </div>
           <div class="col-md-6">
             <p>Into this</p>
-            <select id="simple-multiple" chosen list="countries"  multiple
+            <select id="simple-multiple" chosen list="countries" multiple
               ng-model="data.countries"
               ng-options="country.code as country.name for country in countries">
             </select>
@@ -193,6 +193,9 @@
               </li>
               <li>
                 <p><strong>enable: </strong>changes in this scope attribute will enable/disable the chosen. Checks if the original <em>select</em> has the <em>disabled</em> attribute.</p>
+              </li>
+              <li>
+                <p><strong>max-selected: </strong> Used to set the chosen option <em>max_selected_options</em> for multiple select</p>
               </li>
             </ul>
           </div>

@@ -49,9 +49,16 @@
             });
 
             linker = function ($scope, iElm, iAttr) {
+                var maxSelection = parseInt(iAttr.maxSelection, 10);
+
+                if (isNaN(maxSelection) || maxSelection === Infinity) {
+                    maxSelection: undefined;
+                }
+
                 iElm.chosen({
                     width: '100%',
                     placeholder_text_single: iAttr.placeholder || 'Select an option',
+                    max_selected_options: maxSelection,
                     search_contains: true
                 });
 
