@@ -56,6 +56,10 @@
                     maxSelection = undefined;
                 }
 
+                if (isNaN(searchThreshold) || searchThreshold === Infinity) {
+                    searchThreshold = undefined;
+                }
+
                 iElm.chosen({
                     width: '100%',
                     max_selected_options: maxSelection,
