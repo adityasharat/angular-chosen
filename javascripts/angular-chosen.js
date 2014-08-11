@@ -53,7 +53,7 @@
                     searchThreshold = parseInt(iAttr.searchThreshold, 10);
 
                 if (isNaN(maxSelection) || maxSelection === Infinity) {
-                    maxSelection: undefined;
+                    maxSelection = undefined;
                 }
 
                 iElm.chosen({
