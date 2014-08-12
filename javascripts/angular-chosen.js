@@ -44,7 +44,8 @@
              * Add the list of event handler of the chosen
              * in the scope.
              */
-            Object.keys(EVENTS).forEach(function (eventNameAlias) {
+            EVENTS.forEach(function (event) {
+                var eventNameAlias = Object.keys(event)[0];
                 scope[eventNameAlias] = '=';
             });
 
@@ -76,9 +77,15 @@
                 }, true);
 
                 // assign event handlers
-                Object.keys(EVENTS).forEach(function (eventNameAlias) {
+                EVENTS.forEach(function (event) {
+                    var eventNameAlias = Object.keys(event)[0];
+
                     if (typeof $scope[eventNameAlias] === 'function') { // check if the handler is a function
-                        iElm.on(EVENTS[eventNameAlias], $scope[eventNameAlias]); // listen to the event triggered by chosen
+                        iElm.on(event[eventNameAlias], function (event) {
+                            $scope.$apply(function () {
+                                $scope[eventNameAlias](event);
+                            });
+                        }); // listen to the event triggered by chosen
                     }
                 });
             };
