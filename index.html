@@ -280,7 +280,16 @@
               </li>
               <li>
                 <div class="row">
-                  <div class="col-md-12"></div>
+                  <h3>onNoResult: <small>on-no-result</small></h3>
+                  <div class="col-md-12">
+                    <p>The <em>on-no-result</em> attribute will execute the function assigned to it when the chosen fires the <em>'chosen:no_results'</em> event.</p>
+
+<pre><code class="language-markup">&lt;select chosen list=&quot;countries&quot; on-no-result=&quot;doStuff&quot;
+    ng-model=&quot;data.country&quot;
+    ng-options=&quot;country.code as country.name for country in countries&quot;&gt;
+&lt;/select&gt;</code></pre>
+
+                  </div>
                 </div>
               </li>
             </ul>
