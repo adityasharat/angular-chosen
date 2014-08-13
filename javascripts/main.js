@@ -19,7 +19,6 @@
             $scope.countriesMultiple = Countries.query();
 
             $scope.maxSelected = function (event) {
-                console.log(event);
                 $scope.maxSelectionDone = true;
             };
         }
