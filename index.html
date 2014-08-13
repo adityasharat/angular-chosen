@@ -281,7 +281,7 @@
                       </div>
 
                       <div class="col-md-6">
-                        <p ng-show="chosenOpenedDone">Drop down is open.</p>
+                        <p ng-show="chosenOpenedDone">Drop down was opened.</p>
                       </div>
 
                     </div>
@@ -301,6 +301,25 @@
 &lt;/select&gt;</code></pre>
 
                   </div>
+
+                  <div class="col-md-12">
+                    <h4>Example:</h4>
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <select chosen list="countries"
+                          ng-model="data.country" max-selection="3" on-hide-dropdown="chosenClosed"
+                          ng-options="country.code as country.name for country in countries">
+                        </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <p ng-show="chosenClosedDone">Drop down was closed.</p>
+                      </div>
+
+                    </div>
+                  </div>
+
                 </div>
               </li>
               <li>

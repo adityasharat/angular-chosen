@@ -25,6 +25,10 @@
             $scope.chosenOpened = function () {
                 $scope.chosenOpenedDone = true;
             };
+
+            $scope.chosenClosed = function () {
+                $scope.chosenClosedDone = true;
+            };
         }
     ]);
 
