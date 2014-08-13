@@ -11,6 +11,9 @@
         function () {
             var EVENTS, scope, linker, watchCollection;
 
+            /*
+             * List of events and the alias used for binding with angularJS
+             */
             EVENTS = [{
                 onChange: 'change'
             }, {
@@ -25,6 +28,9 @@
                 onNoResult: 'chosen:no_results'
             }];
 
+            /*
+             * Items to be added in the scope of the directive
+             */
             scope = {
                 list: '=', // the options array
                 enable: '=', // enable of disable the drop-down
