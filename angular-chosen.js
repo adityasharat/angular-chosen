@@ -1,5 +1,5 @@
 /*
- * Use this directive to convert drop downs into chose drop downs.
+ * Use this directive to convert drop downs into chosen drop downs.
  */
 (function (angular) {
     var AngularChosen = angular.module('angular.chosen', []);
