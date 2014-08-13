@@ -21,7 +21,6 @@ Just add 'chosen' as an to a <select> to convert it to a chosen drop down.
 ```HTML
 <select chosen list="properties"
         ng-model="property.name"
-        ng-options="p.name as p.name for p in properties"
-        class="properties-dropdown">
+        ng-options="p.name as p.name for p in properties">
 </select>
 ```
