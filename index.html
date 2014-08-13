@@ -254,9 +254,6 @@
                     <p ng-show="maxSelectionDone">You cannot add more countries to the list</p>
                   </div>
 
-                  <div class="col-md-6">
-                  </div>
-
                 </div>
               </li>
               <li>
@@ -271,6 +268,25 @@
 &lt;/select&gt;</code></pre>
 
                   </div>
+
+                  <div class="col-md-12">
+                    <h4>Example:</h4>
+                    <div class="row">
+
+                      <div class="col-md-6">
+                        <select chosen list="countries"
+                          ng-model="data.country" max-selection="3" on-show-dropdown="chosenOpened"
+                          ng-options="country.code as country.name for country in countries">
+                        </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <p ng-show="chosenOpenedDone">You cannot add more countries to the list</p>
+                      </div>
+
+                    </div>
+                  </div>
+
                 </div>
               </li>
               <li>
