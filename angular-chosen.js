@@ -57,6 +57,7 @@
                 scope[eventNameAlias] = '=';
             });
 
+            /* Linker for the directive */
             linker = function ($scope, iElm, iAttr) {
                 var maxSelection = parseInt(iAttr.maxSelection, 10),
                     searchThreshold = parseInt(iAttr.searchThreshold, 10);
