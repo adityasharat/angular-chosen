@@ -250,14 +250,15 @@
                   </div>
 
                   <div class="col-md-6">
-                    <select id="simple-multiple" chosen list="countries" multiple
+                    <h4>Example:</h4>
+                    <select chosen list="countries" multiple
                       ng-model="data.countries" max-selection="3" on-max-selected="maxSelected"
                       ng-options="country.code as country.name for country in countries">
                     </select>
+                    <p ng-show="maxSelectionDone">You cannot add more countries to the list</p>
                   </div>
 
                   <div class="col-md-6">
-                    <p ng-show="maxSelectionDone">You cannot add more countries to the list</p>
                   </div>
 
                 </div>
