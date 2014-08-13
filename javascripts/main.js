@@ -18,8 +18,12 @@
             $scope.countries = Countries.query();
             $scope.countriesMultiple = Countries.query();
 
-            $scope.maxSelected = function (event) {
+            $scope.maxSelected = function () {
                 $scope.maxSelectionDone = true;
+            };
+
+            $scope.chosenOpened = function () {
+                $scope.chosenOpenedDone = true;
             };
         }
     ]);
