@@ -3,6 +3,8 @@ angular-chosen
 
 Create Chosen dropdowns with ease in angular.
 
+Check out the docs at: http://adityasharat.github.io/angular-chosen/
+
 How to use:
 
 * Include this module in your angular app.
