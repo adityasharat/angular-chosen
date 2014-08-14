@@ -3,6 +3,8 @@ angular-chosen
 
 Create Chosen dropdowns with ease in angular.
 
+Get the beta release https://github.com/adityasharat/angular-chosen/archive/v0.1-beta.zip
+
 Go to http://adityasharat.github.io/angular-chosen/ to see this gh-page
 
 How to use:
