@@ -54,7 +54,7 @@
           </div>
           <div class="col-md-6">
             <p>Into this</p>
-            <select chosen list="countries"
+            <select chosen options="countries"
               ng-model="data.country"
               ng-options="country.code as country.name for country in countries">
             </select>
@@ -64,7 +64,7 @@
 
 
 <pre><code class="language-markup">&lt;select chosen
-    list=&quot;countries&quot;
+    option=&quot;countries&quot;
   ng-model=&quot;data.country&quot;
   ng-options=&quot;country.code as country.name
       for country in countries&quot;&gt;
@@ -97,13 +97,13 @@
           </div>
           <div class="col-md-6">
             <p>Into this</p>
-            <select id="simple-multiple" chosen list="countries" multiple
+            <select id="simple-multiple" chosen options="countries" multiple
               ng-model="data.countries"
               ng-options="country.code as country.name for country in countries">
             </select>
 
 <pre><code class="language-markup">&lt;select chosen multiple
-    list=&quot;countries&quot;
+    options=&quot;countries&quot;
   ng-model=&quot;data.country&quot;
   ng-options=&quot;country.code as country.name
       for country in countries&quot;&gt;
@@ -182,7 +182,7 @@
                 <p><strong>model: </strong>the property in the scope to which the drop downs value is binded to. Same as <em>ng-model</em></p>
               </li>
               <li>
-                <p><strong>list: </strong>the list of options the drop-down will have. Same as the array/object passed in <em>ng-options</em></p>
+                <p><strong>options: </strong>the list of options the drop-down will have. Same as the array/object passed in <em>ng-options</em></p>
               </li>
               <li>
                 <p><strong>change: </strong>changes in this scope attribute will trigger <em>chosen:updated</em> event.</p>
@@ -210,7 +210,7 @@
                   <div class="col-md-12">
                     <p>The <em>on-change</em> attribute will execute the function assigned to it when the chosen fires the <em>'change'</em> event.</p>
 
-<pre><code class="language-markup">&lt;select chosen list=&quot;countries&quot; on-change=&quot;doStuff&quot;
+<pre><code class="language-markup">&lt;select chosen options=&quot;countries&quot; on-change=&quot;doStuff&quot;
     ng-model=&quot;data.country&quot;
     ng-options=&quot;country.code as country.name for country in countries&quot;&gt;
 &lt;/select&gt;</code></pre>
@@ -224,7 +224,7 @@
                   <div class="col-md-12">
                     <p>The <em>on-ready</em> attribute will execute the function assigned to it when the chosen fires the <em>'chosen:ready'</em> event.</p>
 
-<pre><code class="language-markup">&lt;select chosen list=&quot;countries&quot; on-ready=&quot;doStuff&quot;
+<pre><code class="language-markup">&lt;select chosen options=&quot;countries&quot; on-ready=&quot;doStuff&quot;
     ng-model=&quot;data.country&quot;
     ng-options=&quot;country.code as country.name for country in countries&quot;&gt;
 &lt;/select&gt;</code></pre>
@@ -238,7 +238,7 @@
                   <div class="col-md-12">
                     <p>The <em>on-max-selected</em> attribute will execute the function assigned to it when the chosen fires the <em>'chosen:maxselected'</em> event.</p>
 
-<pre><code class="language-markup">&lt;select chosen multiple list=&quot;countries&quot; max-selection=&quot;3&quot; on-max-selected=&quot;doStuff&quot;
+<pre><code class="language-markup">&lt;select chosen multiple options=&quot;countries&quot; max-selection=&quot;3&quot; on-max-selected=&quot;doStuff&quot;
     ng-model=&quot;data.country&quot;
     ng-options=&quot;country.code as country.name for country in countries&quot;&gt;
 &lt;/select&gt;</code></pre>
@@ -247,7 +247,7 @@
 
                   <div class="col-md-6">
                     <h4>Example:</h4>
-                    <select chosen list="countries" multiple
+                    <select chosen options="countries" multiple
                       ng-model="data.countries" max-selection="3" on-max-selected="maxSelected"
                       ng-options="country.code as country.name for country in countries">
                     </select>
@@ -262,7 +262,7 @@
                   <div class="col-md-12">
                     <p>The <em>on-show-dropdown</em> attribute will execute the function assigned to it when the chosen fires the <em>'chosen:showing_dropdown'</em> event.</p>
 
-<pre><code class="language-markup">&lt;select chosen list=&quot;countries&quot; on-show-dropdown=&quot;doStuff&quot;
+<pre><code class="language-markup">&lt;select chosen options=&quot;countries&quot; on-show-dropdown=&quot;doStuff&quot;
     ng-model=&quot;data.country&quot;
     ng-options=&quot;country.code as country.name for country in countries&quot;&gt;
 &lt;/select&gt;</code></pre>
@@ -274,7 +274,7 @@
                     <div class="row">
 
                       <div class="col-md-6">
-                        <select chosen list="countries"
+                        <select chosen options="countries"
                           ng-model="data.country" max-selection="3" on-show-dropdown="chosenOpened"
                           ng-options="country.code as country.name for country in countries">
                         </select>
@@ -295,7 +295,7 @@
                   <div class="col-md-12">
                     <p>The <em>on-hide-dropdown</em> attribute will execute the function assigned to it when the chosen fires the <em>'chosen:hiding_dropdown'</em> event.</p>
 
-<pre><code class="language-markup">&lt;select chosen list=&quot;countries&quot; on-hide-dropdown=&quot;doStuff&quot;
+<pre><code class="language-markup">&lt;select chosen options=&quot;countries&quot; on-hide-dropdown=&quot;doStuff&quot;
     ng-model=&quot;data.country&quot;
     ng-options=&quot;country.code as country.name for country in countries&quot;&gt;
 &lt;/select&gt;</code></pre>
@@ -307,7 +307,7 @@
                     <div class="row">
 
                       <div class="col-md-6">
-                        <select chosen list="countries"
+                        <select chosen options="countries"
                           ng-model="data.country" max-selection="3" on-hide-dropdown="chosenClosed"
                           ng-options="country.code as country.name for country in countries">
                         </select>
@@ -328,7 +328,7 @@
                   <div class="col-md-12">
                     <p>The <em>on-no-result</em> attribute will execute the function assigned to it when the chosen fires the <em>'chosen:no_results'</em> event.</p>
 
-<pre><code class="language-markup">&lt;select chosen list=&quot;countries&quot; on-no-result=&quot;doStuff&quot;
+<pre><code class="language-markup">&lt;select chosen options=&quot;countries&quot; on-no-result=&quot;doStuff&quot;
     ng-model=&quot;data.country&quot;
     ng-options=&quot;country.code as country.name for country in countries&quot;&gt;
 &lt;/select&gt;</code></pre>

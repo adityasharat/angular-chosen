@@ -30,7 +30,7 @@
          * Items to be added in the scope of the directive
          */
         scope = {
-            list: '=', // the options array
+            options: '=', // the options array
             enable: '=', // enable of disable the drop-down
             change: '=', // change will trigger the chosen:updated event
             model: '=', // the model to which the drop-down should bind,
