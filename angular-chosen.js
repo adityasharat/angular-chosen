@@ -30,11 +30,9 @@
          * Items to be added in the scope of the directive
          */
         scope = {
-            list: '=', // the options array
-            enable: '=', // enable of disable the drop-down
-            change: '=', // change will trigger the chosen:updated event
-            model: '=', // the model to which the drop-down should bind,
-            ngModel: '='
+            options: '=', // the options array
+            ngModel: '=', // the model to bind to,,
+            ngDisabled: '=',
         };
 
         /*
@@ -79,9 +77,11 @@
                 iElm.trigger('chosen:updated');
             });
 
-            $scope.$watch('[' + watchCollection.join(',') + ']', function () {
-                iElm.trigger('chosen:updated');
-            }, true);
+            $scope.$watchGroup(watchCollection, function () {
+                setTimeout(function () {
+                    iElm.trigger('chosen:updated');
+                }, 100);
+            });
 
             // assign event handlers
             EVENTS.forEach(function (event) {
