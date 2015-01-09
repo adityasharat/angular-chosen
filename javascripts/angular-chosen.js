@@ -78,8 +78,10 @@
             });
 
             $scope.$watchGroup(watchCollection, function () {
-                iElm.trigger('chosen:updated');
-            }, true);
+                setTimeout(function () {
+                    iElm.trigger('chosen:updated');
+                }, 100);
+            });
 
             // assign event handlers
             EVENTS.forEach(function (event) {
