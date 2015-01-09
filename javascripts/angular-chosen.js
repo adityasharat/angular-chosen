@@ -77,7 +77,7 @@
                 iElm.trigger('chosen:updated');
             });
 
-            $scope.$watch('[' + watchCollection.join(',') + ']', function () {
+            $scope.$watchGroup(watchCollection, function () {
                 iElm.trigger('chosen:updated');
             }, true);
 
