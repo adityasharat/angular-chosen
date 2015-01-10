@@ -15,11 +15,11 @@ How to use:
 ```
 
 Just add 'chosen' as an to a <select> to convert it to a chosen drop down.
-* list : options for the drop down.
+* options : options for the drop down.
 * model : to what is the chosen binded to.
 
 ```HTML
-<select chosen list="properties"
+<select chosen options="properties"
         ng-model="property.name"
         ng-options="p.name as p.name for p in properties">
 </select>
