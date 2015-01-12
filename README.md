@@ -16,7 +16,7 @@ How to use:
 	angular.module('myModule', ['angular.chosen']);
 ```
 
-Just add 'chosen' as an to a <select> to convert it to a chosen drop down.
+Just add 'chosen' as an attribute to a `<select>` to convert it to a chosen drop down.
 * options : options for the drop down.
 * model : to what is the chosen binded to.
 
