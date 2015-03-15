@@ -32,7 +32,7 @@
         scope = {
             options: '=', // the options array
             ngModel: '=', // the model to bind to,,
-            ngDisabled: '=',
+            ngDisabled: '='
         };
 
         /*
