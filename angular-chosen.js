@@ -6,7 +6,7 @@
 (function (angular) {
     var AngularChosen = angular.module('angular.chosen', []);
 
-    AngularChosen.directive('chosen', function () {
+    AngularChosen.directive('chosen', ['$timeout', function ($timeout) {
         var EVENTS, scope, linker, watchCollection;
 
         /*
@@ -32,7 +32,7 @@
         scope = {
             options: '=', // the options array
             ngModel: '=', // the model to bind to,,
-            ngDisabled: '=',
+            ngDisabled: '='
         };
 
         /*
@@ -78,7 +78,7 @@
             });
 
             $scope.$watchGroup(watchCollection, function () {
-                setTimeout(function () {
+                $timeout(function () {
                     iElm.trigger('chosen:updated');
                 }, 100);
             });
@@ -104,5 +104,5 @@
             restrict: 'A',
             link: linker
         };
-    });
+    }]);
 }(angular));
