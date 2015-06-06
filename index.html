@@ -97,9 +97,9 @@
           </div>
           <div class="col-md-6">
             <p>Into this</p>
-            <select id="simple-multiple" chosen options="countries" multiple
-              ng-model="data.countries"
-              ng-options="country.code as country.name for country in countries">
+            <select id="simple-multiple" chosen multiple options="countries"
+              ng-model="countriesTest"
+              ng-options="country as country.name for country in countries track by country.code">
             </select>
 
 <pre><code class="language-markup">&lt;select chosen multiple

@@ -6,17 +6,20 @@
         function ($resource) {
             return $resource('data/countries.json');
         }
-    ])
+    ]);
 
     AngularChosenDemo.controller('demoController', ['$scope', 'Countries',
         function ($scope, Countries) {
             var data = {
                 countries: [],
-                country: []
+                country: [],
+                countriesTest: []
             };
 
             $scope.countries = Countries.query();
-            $scope.countriesMultiple = Countries.query();
+            $scope.countriesMultiple = Countries.query(function (cts) {
+                $scope.countriesTest = [cts[0], cts[1], cts[2]];
+            });
 
             $scope.maxSelected = function () {
                 $scope.maxSelectionDone = true;
