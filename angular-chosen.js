@@ -68,13 +68,15 @@
       }
 
       var allowSingleDeselect = iElm.attr('allow-single-deselect') !== undefined ? true : false;
+      var noResultsText = iElm.attr('no-results-text') !== undefined ? iAttr.noResultsText : "No results found.";
 
       iElm.chosen({
         width: '100%',
         max_selected_options: maxSelection,
         disable_search_threshold: searchThreshold,
         search_contains: true,
-        allow_single_deselect: allowSingleDeselect
+        allow_single_deselect: allowSingleDeselect,
+        no_results_text: noResultsText
       });
 
       iElm.on('change', function () {
