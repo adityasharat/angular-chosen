@@ -5,7 +5,7 @@ Create Chosen dropdowns with ease in angular.
 
 Check out the docs at: http://adityasharat.github.io/angular-chosen/
 
-Get the latest version for angular 1.3.x [here](https://github.com/adityasharat/angular-chosen/archive/v1.0.zip)
+Get the latest version for angular 1.3.x [here](https://github.com/adityasharat/angular-chosen/releases/tag/v1.2)
 
 Get the version for angular 1.2.x [here](https://github.com/adityasharat/angular-chosen/archive/v0.1-beta.zip)
 
