@@ -1,7 +1,7 @@
 angular-chosen
 ==============
 
-Create Chosen dropdowns with ease in angular.
+# Create Chosen dropdowns with ease in angular.
 
 Check out the docs at: http://adityasharat.github.io/angular-chosen/
 
@@ -9,7 +9,11 @@ Get the latest version for angular 1.3.x [here](https://github.com/adityasharat/
 
 Get the version for angular 1.2.x [here](https://github.com/adityasharat/angular-chosen/archive/v0.1-beta.zip)
 
-How to use:
+## Bower Support
+
+`bower install angular-chosen-js`
+
+## How to use:
 
 * Include this module in your angular app.
 ```JavaScript
