@@ -1,18 +1,18 @@
 /*
  * The MIT License (MIT)
- * 
+ *
  * Copyright (c) 2016 Aditya Sharat
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -92,6 +92,8 @@
 
       var allowSingleDeselect = iElm.attr('allow-single-deselect') !== undefined ? true : false;
       var noResultsText = iElm.attr('no-results-text') !== undefined ? iAttr.noResultsText : "No results found.";
+      var placeholderTextSingle = iElm.attr('placeholder-text-single') !== undefined ? iAttr.placeholderTextSingle : "Select an Option";
+      var placeholderTextMultiple = iElm.attr('placeholder-text-multiple') !== undefined ? iAttr.placeholderTextMultiple : "Select Some Options";
 
       iElm.chosen({
         width: '100%',
@@ -99,7 +101,9 @@
         disable_search_threshold: searchThreshold,
         search_contains: true,
         allow_single_deselect: allowSingleDeselect,
-        no_results_text: noResultsText
+        no_results_text: noResultsText,
+        placeholder_text_single: placeholderTextSingle,
+        placeholder_text_multiple: placeholderTextMultiple
       });
 
       iElm.on('change', function () {
