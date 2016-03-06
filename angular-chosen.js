@@ -92,7 +92,7 @@
 
       var allowSingleDeselect = iElm.attr('allow-single-deselect') !== undefined ? true : false;
       var noResultsText = iElm.attr('no-results-text') !== undefined ? iAttr.noResultsText : "No results found.";
-      var disableSearch = iElm.attr('disable-search') !== undefined ? iAttr.disableSearch : false;
+      var disableSearch = iElm.attr('disable-search') !== undefined ? JSON.parse(iAttr.disableSearch) : false;
       var disableSearchThreshold = iElm.attr('disable-search-threshold') !== undefined ? iAttr.disableSearchThreshold : 0;
       var placeholderTextSingle = iElm.attr('placeholder-text-single') !== undefined ? iAttr.placeholderTextSingle : "Select an Option";
       var placeholderTextMultiple = iElm.attr('placeholder-text-multiple') !== undefined ? iAttr.placeholderTextMultiple : "Select Some Options";
