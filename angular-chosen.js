@@ -92,8 +92,11 @@
 
       var allowSingleDeselect = iElm.attr('allow-single-deselect') !== undefined ? true : false;
       var noResultsText = iElm.attr('no-results-text') !== undefined ? iAttr.noResultsText : "No results found.";
+      var disableSearch = iElm.attr('disable-search') !== undefined ? JSON.parse(iAttr.disableSearch) : false;
       var placeholderTextSingle = iElm.attr('placeholder-text-single') !== undefined ? iAttr.placeholderTextSingle : "Select an Option";
       var placeholderTextMultiple = iElm.attr('placeholder-text-multiple') !== undefined ? iAttr.placeholderTextMultiple : "Select Some Options";
+      var displayDisabledOptions = iElm.attr('display-disabled-options') !== undefined ? JSON.parse(iAttr.displayDisabledOptions) : true;
+      var displaySelectedOptions = iElm.attr('display-selected-options') !== undefined ? JSON.parse(iAttr.displaySelectedOptions) : true;
 
       iElm.chosen({
         width: '100%',
@@ -102,8 +105,11 @@
         search_contains: true,
         allow_single_deselect: allowSingleDeselect,
         no_results_text: noResultsText,
+        disable_search: disableSearch,
         placeholder_text_single: placeholderTextSingle,
-        placeholder_text_multiple: placeholderTextMultiple
+        placeholder_text_multiple: placeholderTextMultiple,
+        display_disabled_options: displayDisabledOptions,
+        display_selected_options: displaySelectedOptions
       });
 
       iElm.on('change', function () {
